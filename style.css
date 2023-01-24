@@ -5,7 +5,7 @@
 }
 
 body{
-    background: #222831;
+    background: #3D0000;
 }
 
 .main{
@@ -15,3 +15,6 @@ body{
     align-items: center;
 }
 
+.main h1{
+    color: #ffffff;
+}
