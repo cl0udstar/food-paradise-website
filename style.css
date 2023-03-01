@@ -1,0 +1,104 @@
+/* 
+Color 1: #f0f2f5 
+Color 2: #818a98
+Color 3: #b9bec6
+Color 4: #393e46
+Color 5: #3f4a5a
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('background.jpg');
+    background-size: cover;
+    /* background: #f0f2f5; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: ease-in 0.5s;
+    font-family: "Courier New", monospace;
+    color: #393e46;
+    font-weight: bold;
+}
+
+.welcome-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f0f2f5;
+    /* color: #393e46; (color 4) */
+    padding-bottom: 50px;
+}
+
+.welcome-text p{
+    font-size: 30px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+}
+
+/* .top .navbar{
+    padding: 30px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+} */
+
+.top .navbar ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.top .navbar ul li a{
+    text-decoration: none;
+    color: #f0f2f5;
+    padding: 5px 40px 5px 40px;
+    transition: 0.5s ease;
+}
+
+.top .navbar ul:hover li a{
+    color: #f0f2f5;
+}
+
+.top .navbar ul:hover li a:not(:hover){
+    color: #f0f2f5;
+    opacity: 0.8;
+    filter: blur(0.7px);
+}
+
+
+/* .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar a{
+    border: 3.5px solid #393e46; 
+    padding: 5px 5px;
+	font-size: 15px;
+	cursor: pointer;
+	margin: 5px;
+	transition: 0.5s;
+    color: #393e46;
+	text-decoration: none;
+}
+
+.navbar a:hover{
+	color: #818a98;
+} */
+
+
+.top .clock{
+    color: #f0f2f5;
+}
