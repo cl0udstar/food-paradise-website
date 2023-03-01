@@ -2,47 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
-    <title>SET08101 - Web Tech</title>
+    <title>Food Paradise</title>
     <script>
         function darkMode(){
             var body_color_mode = document.body;
             body_color_mode.classList.toggle("dark-mode");
 
-            var x = document.getElementById("dark");
-            if (x.style.display === "none") {
-                x.style.display = "block";
+            var dark_tip = document.getElementById("dark");
+            if (dark_tip.style.display === "none") {
+                dark_tip.style.display = "block";
             } else {
-                x.style.display = "none";
+                dark_tip.style.display = "none";
             }
 
-            var y = document.getElementById("light");
-            if (y.style.display === "block") {
-                y.style.display = "none";
+            var light_tip = document.getElementById("light");
+            if (light_tip.style.display === "block") {
+                light_tip.style.display = "none";
             } else {
-                y.style.display = "block";
+                light_tip.style.display = "block";
             }
         }
     </script>
+    <script src="clockjs.js" defer></script>
+    <script src="search.js"></script>
 </head>
 
 <body>
-    <div class="text">
-        <p>Pizza</p>
-    </div>
-
-    <div class="dark-mode-toggle">
-        <div class="icon">
-            <label>
-                <input type="checkbox" onclick="darkMode()" id="dark-mode">
-                <span class="check"></span>
-            </label> 
-            <div class="tip">
-                <span onclick="darkMode()" id="dark">Dark Mode</span>
-                <span id="light" style="display: none">Light Mode</span>
-            </div>
+    <!-- <div class="welcome-text">
+        <p>Welcome to The Food Paradise</p>
+    </div> -->
+    <div class="top">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Recipe of the day</a></li>
+                <li><a href="search-recipes.html">Search</a></li>
+            </ul>
+        </div>
+        <div class="clock">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
         </div>
     </div>
+
+    <input id="searchbar" onkeyup="search_animal()" type="text" name="search">
+
+    <ul id="list-holder">
+
+    </ul>
 </body>
 </html>

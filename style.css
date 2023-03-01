@@ -1,3 +1,11 @@
+/* 
+Color 1: #f0f2f5 
+Color 2: #818a98
+Color 3: #b9bec6
+Color 4: #393e46
+Color 5: #3f4a5a
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -5,120 +13,92 @@
 }
 
 body{
-    background: white; /*#222831*/
+    background-image: url('background.jpg');
+    background-size: cover;
+    /* background: #f0f2f5; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     transition: ease-in 0.5s;
     font-family: "Courier New", monospace;
+    color: #393e46;
     font-weight: bold;
 }
 
-.text{
-    height: 100vh;
-    width: 70px;
-    background: #fd7014;
-    display: inline-flex;
-    justify-content: center;
+.welcome-text{
+    display: flex;
     align-items: center;
-    z-index: 99;
+    justify-content: center;
+    color: #f0f2f5;
+    /* color: #393e46; (color 4) */
+    padding-bottom: 50px;
 }
 
-.text p{
-    color: #222831;
+.welcome-text p{
+    font-size: 30px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-bottom: 30px;
     font-size: 20px;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
 }
 
-.dark-mode-toggle{
-    display: inline-flex;
-    position: absolute;
-    right: 2%;
-    top: 2%;
+/* .top .navbar{
+    padding: 30px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+} */
+
+.top .navbar ul li{
+    display: inline-block;
+    list-style: none;
 }
 
-.dark-mode{
-    background-color: #222831;
-    color: white;
-    transition: ease-in 0.5s;
+.top .navbar ul li a{
+    text-decoration: none;
+    color: #f0f2f5;
+    padding: 5px 40px 5px 40px;
+    transition: 0.5s ease;
 }
 
-input{
-    visibility: hidden;
-    display: none;
+.top .navbar ul:hover li a{
+    color: #f0f2f5;
 }
 
-.check{
-    position: relative;
-    display: block;
-    width: 40px;
-    height: 20px;
-    background: #222831;
-    cursor: pointer;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: ease-in 0.5s;
-}
-
-input:checked + .check{
-    background: white;
-}
-
-.check::before{
-    content: "";
-    position: absolute;
-    top: 2.5px;
-    left: 2.5px;
-    background: #fd7014;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-.check::after{
-    content: "";
-    position: absolute;
-    top: 2.5px;
-    left: 2.5px;
-    background: #222831;
-    border-radius: 50%;
-    transition: 0.5s;
-    transform: translateX(-50px);
+.top .navbar ul:hover li a:not(:hover){
+    color: #f0f2f5;
+    opacity: 0.8;
+    filter: blur(0.7px);
 }
 
 
-.dark-mode-toggle .icon{
-    margin: 0 5px;
-    cursor: pointer;
-    /* display: flex;
+/* .navbar{
+    display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; */
-    z-index: 2;
 }
 
-.dark-mode-toggle .icon .tip{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background: #fd7014;
-    padding: 10px 10px;
-    font-size: 10px;
-    border-radius: 15px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s;
+.navbar a{
+    border: 3.5px solid #393e46; 
+    padding: 5px 5px;
+	font-size: 15px;
+	cursor: pointer;
+	margin: 5px;
+	transition: 0.5s;
+    color: #393e46;
+	text-decoration: none;
 }
 
-.dark-mode-toggle .icon:hover .tip{
-    opacity: 1;
-    pointer-events: auto;
-    top: 30px;
-}
+.navbar a:hover{
+	color: #818a98;
+} */
 
-.dark-mode-toggle .icon .tip::before{
-    position: absolute;
-    content: "";
-    height: 10px;
-    width: 10px;
-    background-color: #fd7014;
-    top: -4px;
-    left: 60%;
-    transform: translateX(-50%) rotate(45deg);
-    z-index: -99;
+
+.top .clock{
+    color: #f0f2f5;
 }

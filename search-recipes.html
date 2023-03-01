@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Food Paradise</title>
+    <script>
+        function darkMode(){
+            var body_color_mode = document.body;
+            body_color_mode.classList.toggle("dark-mode");
+
+            var dark_tip = document.getElementById("dark");
+            if (dark_tip.style.display === "none") {
+                dark_tip.style.display = "block";
+            } else {
+                dark_tip.style.display = "none";
+            }
+
+            var light_tip = document.getElementById("light");
+            if (light_tip.style.display === "block") {
+                light_tip.style.display = "none";
+            } else {
+                light_tip.style.display = "block";
+            }
+        }
+    </script>
+    <script src="clockjs.js" defer></script>
+    <script src="search.js"></script>
+</head>
+
+<body>
+    <!-- <div class="welcome-text">
+        <p>Welcome to The Food Paradise</p>
+    </div> -->
+
+    <div class="top">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Test</a></li>
+            </ul>
+        </div>
+    
+        <div class="clock">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+    </div>
+
+    <input type="text" placeholder="Search" id="search">
+    <div class="match-list"></div>
+</body>
+</html>
