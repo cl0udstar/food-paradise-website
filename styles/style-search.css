@@ -1,0 +1,246 @@
+/* 
+Color 1: #f0f2f5 - D4D5D8 - B8B9BA - 9C9C9D - 757576
+--Color 2: #818a98
+--Color 3: #b9bec6
+--Color 4: #393e46
+--Color 5: #3f4a5a
+Color 6: #DAF7A6
+Color 7: #36454f
+
+New colours:
+1: #C3BA85 - darkest
+2: #DAD5AB - lower darkest
+3: #F0F0CB - lower lightest
+4: #FEFFE2 - lightest
+
+Add maybe a page that has quizzes or puzzles
+*/
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/background.jpg');
+}
+
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    /* padding-bottom: 30px; */
+    font-size: 20px;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+}
+
+.top .navbar ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.top .navbar ul li a{
+    text-decoration: none;
+    /* color: #f0f2f5; */
+    color: #FEFFE2;
+    padding: 5px 40px 5px 40px;
+    transition: 0.5s ease;
+}
+
+.top .navbar ul:hover li a{
+    /* color: #BFD891; */
+    color: #DAD5AB;
+}
+
+.top .navbar ul:hover li a:not(:hover){
+    /* color: #f0f2f5; */
+    color: #FEFFE2;
+    opacity: 0.8;
+    filter: blur(0.7px);
+}
+
+.top .clock{
+    /* color: #f0f2f5; */
+    color: #FEFFE2;
+}
+
+
+
+/* Start of the search box design */
+.search-values-all{
+    display: block;
+}
+
+.search-values-all .search-text{
+    padding: 20px;
+}
+
+.search-values-all .search-text p{
+    /* color: #f0f2f5; */
+    color: #FEFFE2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search-values-all .search-values{
+    padding: 40px;
+    /* position: absolute; */
+    /* top: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    background: none;
+}
+
+.search-values-all .search-values .search-box{
+    /* position: absolute; */
+    /* display: flex; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    
+    backdrop-filter: blur(5px);
+    height: 40px;
+    padding: 10px;
+    /* border: 2px solid #B8CA98; */
+    border: 2px solid #C3BA85;
+    border-radius: 50% 20% / 10% 25%;
+}
+
+.search-values-all .search-values .search-box .search-btn{
+    /* color: #B1F7A6; */
+    color: #C3BA85;
+}
+
+.search-values-all .search-values .search-box .search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    font-size: 16px;
+    /* color: #f0f2f5; */
+    color: #FEFFE2;
+}
+
+.search-values-all .search-values .search-box .search-txt::placeholder{
+    /* color: #f0f2f5; */
+    color: #FEFFE2;
+}
+
+
+/* Design for the search output */
+/* #output li a{
+    color: #f0f2f5;
+} */
+
+/* #output{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+} */
+#output-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* #output-text > .image-link > .image{
+    width: 30vmin;
+    height: 45vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    border-radius: 20px;
+}
+
+#output-text > .image-link > a{
+    object-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B1F7A6;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+} */
+
+#output{
+    transition: 0.5s ease;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 40px; 
+    position: absolute; 
+    left: 50%; 
+    top: 55%;
+    transform: translate(0%, -50%);
+    user-select: none;
+}
+  
+/* #output > .image-link{
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+} */
+
+#output > .image-link > .image, #output-text > .image-link > .image{
+    width: 30vmin;
+    height: 30vmin;
+    object-fit: cover;
+    object-position: 50% center;
+    /* border-radius: 50% 20% / 10% 25%; */
+    border-radius: 30px;
+    
+    box-shadow: 3px 3px 10px #19191b, -3px -3px 10px #19191b;
+}
+
+#output > .image-link > a, #output-text > .image-link > a{
+    /* object-position: center center; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #f0f2f5; */
+    color: #FEFFE2;
+    text-decoration: none;
+    /* border: 1px solid #B8CA98; */
+    border: 1px solid #C3BA85;
+    border-radius: 30px;
+    /* border-radius: 50% 20% / 10% 25%; */
+    backdrop-filter: blur(5px);
+    box-shadow: 3px 3px 10px #19191b, -3px -3px 10px #19191b;
+}
+
+
+
+
+.filter-btn{
+    /* display: flex; */
+    background: none;
+    /* color: #B8CA98; */
+    color: #C3BA85;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+  
+.filter{
+    /* position: relative; */
+    display: inline;
+}
+
+.filter-content{
+    display: none;
+    position: absolute;
+    /* background-color: #f6f6f6; */
+    min-width: 230px;
+    overflow: auto;
+    /* border: 1px solid #ddd; */
+    z-index: 1;
+}
+
+.show{
+    display: inline;
+}

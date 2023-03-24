@@ -1,0 +1,62 @@
+/* 
+Color 1: #f0f2f5 - D4D5D8 - B8B9BA - 9C9C9D - 757576
+--Color 2: #818a98
+--Color 3: #b9bec6
+--Color 4: #393e46
+--Color 5: #3f4a5a
+Color 6: #DAF7A6
+Color 7: #36454f
+
+New colours:
+1: #C3BA85 - darkest
+2: #DAD5AB - lower darkest
+3: #F0F0CB - lower lightest
+4: #FEFFE2 - lightest
+Add maybe a page that has quizzes or puzzles
+*/
+
+.welcome-text{
+    /* display: flex; */
+    padding: 70px;
+    margin: 90px 0 0 0;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* color: #BFD891; */
+    /* color: #393e46; (color 4) */
+    /* padding-bottom: 50px; */
+    width: 50%;
+
+    transform: perspective(1000px) rotateY(20deg) scale(0.9) rotateX(5deg);
+    /* filter: blur(2px);
+    opacity: 0.5; */
+    transition: 0.5s ease-in;
+}
+
+.welcome-text:hover{
+    padding: 70px;
+    margin: 90px 0 0 0;
+    width: 50%;
+    transform: perspective(800px) rotateY(0deg) scale(1) rotateX(0deg);
+}
+
+.welcome-text .welcome-text-title{
+    /* color: #f0f2f5; */
+    color: #FEFFE2;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.welcome-text .welcome-text-description{
+    /* color: #E6F1E9; */
+    color: #FEFFE2;
+    font-size: 15px;
+    padding: 25px;
+    /* height: 200px; */
+    /* width: 40%; */
+    line-height: normal;
+    /* border: 2px solid #BFD891; */
+    border: 2px solid #C3BA85;
+    border-radius: 50% 20% / 10% 25%;
+    backdrop-filter: blur(5px);
+}
