@@ -3,36 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="style.css">
-    <title>Food Paradise</title>
+    <link rel="stylesheet" href="styles/style-default.css">
+    <link rel="stylesheet" href="styles/style-index.css">
+    <title>The Food Paradise</title>
     <script>
-        function darkMode(){
-            var body_color_mode = document.body;
-            body_color_mode.classList.toggle("dark-mode");
-
-            var dark_tip = document.getElementById("dark");
-            if (dark_tip.style.display === "none") {
-                dark_tip.style.display = "block";
-            } else {
-                dark_tip.style.display = "none";
-            }
-
-            var light_tip = document.getElementById("light");
-            if (light_tip.style.display === "block") {
-                light_tip.style.display = "none";
-            } else {
-                light_tip.style.display = "block";
-            }
+        function hoverOver(){
+            document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg')"
+        }
+        function hoverOut(){
+            document.body.style.backgroundImage = "url('images/background.jpg')"
         }
     </script>
-    <script src="clockjs.js" defer></script>
-    <!--<script src="search.js"></script>-->
+    <script src="scripts/clock-script.js" defer></script>
 </head>
 
 <body>
-    <!-- <div class="welcome-text">
-        <p>Welcome to The Food Paradise</p>
-    </div> -->
     <div class="top">
         <div class="navbar">
             <ul>
@@ -49,10 +34,20 @@
         </div>
     </div>
 
-    <input id="searchbar" onkeyup="search_animal()" type="text" name="search">
-
-    <ul id="list-holder">
-
-    </ul>
+    <div class="welcome-text" onmouseover="hoverOver()" onmouseout="hoverOut()">
+        <p class="welcome-text-title">The Food Paradise</h2>
+        <p class="welcome-text-description">
+            Welcome to "The Food Paradise" - the ultimate online destination for foodies! 
+            With a mouth-watering collection of recipes and all sorts of juicy information 
+            on everything related to cooking and eating, our website is your one-stop-shop 
+            for all things delicious. Whether you're a beginner or a seasoned pro, we've got 
+            you covered with quick and easy meals, fancy dishes for special occasions, and 
+            helpful resources like cooking guides, ingredient info, and nutrition tips. 
+            <br>
+            <br>
+            So come and explore "The Food Paradise" today and get ready to unleash your 
+            inner chef!
+        </p>
+    </div>
 </body>
 </html>
