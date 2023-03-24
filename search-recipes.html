@@ -2,46 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <title>Food Paradise</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/style-default.css">
+    <link rel="stylesheet" href="styles/style-search.css">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" data-auto-replace-svg="nest"></script>
+    <title>Food Paradise - Search</title>
+    <script src="scripts/clock-script.js" defer></script>
+    <script src="scripts/search-script.js"></script> 
     <script>
-        function darkMode(){
-            var body_color_mode = document.body;
-            body_color_mode.classList.toggle("dark-mode");
-
-            var dark_tip = document.getElementById("dark");
-            if (dark_tip.style.display === "none") {
-                dark_tip.style.display = "block";
-            } else {
-                dark_tip.style.display = "none";
-            }
-
-            var light_tip = document.getElementById("light");
-            if (light_tip.style.display === "block") {
-                light_tip.style.display = "none";
-            } else {
-                light_tip.style.display = "block";
-            }
-        }
+        function filterExtend() {
+            document.getElementById("filter-ing").classList.toggle("show");
+    }
     </script>
-    <script src="clockjs.js" defer></script>
-    <!--<script src="search.js"></script>-->
 </head>
 
 <body>
-    <!-- <div class="welcome-text">
-        <p>Welcome to The Food Paradise</p>
-    </div> -->
-
     <div class="top">
         <div class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Test</a></li>
+                <li><a href="#">Recipe of the day</a></li>
             </ul>
         </div>
-    
+
         <div class="clock">
             <span id="hours">00</span>
             <span>:</span>
@@ -51,7 +34,35 @@
         </div>
     </div>
 
-    <input type="text" placeholder="Search" id="search">
-    <div class="match-list"></div>
+    <div class="search-values-all">
+        <div class="search-text">
+            <p>Using the search bar or the filters, it doesn't matter...</p>
+            <br>
+            <p>It gives the same result</p>
+        </div>
+        <div class="search-values">
+            <div class="search-box">
+                <input class="search-txt" type="text" placeholder="Search..." id="search" onkeyup="getInputValue()">
+                <span class="search-btn">
+                    <i class="fas fa-search"></i>
+                </span>
+            </div>
+        
+            <div class="filter">
+                <button class="filter-btn" onclick="filterExtend()">
+                    <i class="fa-solid fa-sliders"></i>
+                </button>
+                <div id="filter-ing" class="filter-content" onchange="getInputValue2()">
+                    <input type="checkbox" id="search2" value="onion" >
+                        <label>onion</label><br>
+                    <input type="checkbox" id="search2" value="garlic">
+                        <label>mozzarella</label><br>
+                </div>
+            </div>
+        </div>
+        <div id="output" data-mouse-down-at="0" data-prev-percentage="-45"></div>
+        <div id="output-text"></div>
+    </div>
+    <script src="scripts/carousel-script.js"></script>
 </body>
 </html>
