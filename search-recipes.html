@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles/style-search.css">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" data-auto-replace-svg="nest"></script>
     <title>Food Paradise - Search</title>
-    <script src="scripts/clock-script.js" defer></script>
+    <link rel="icon" type="png" href="images/logo2.0.png">
+    <script src="scripts/clock-script.js"></script>
     <script src="scripts/search-script.js"></script> 
     <script>
         function filterExtend() {
@@ -42,7 +43,7 @@
         </div>
         <div class="search-values">
             <div class="search-box">
-                <input class="search-txt" type="text" placeholder="Search..." id="search" onkeyup="getInputValue()">
+                <input class="search-txt" type="text" placeholder="Search..." id="search" onkeyup="searchEngine()">
                 <span class="search-btn">
                     <i class="fas fa-search"></i>
                 </span>
@@ -52,15 +53,25 @@
                 <button class="filter-btn" onclick="filterExtend()">
                     <i class="fa-solid fa-sliders"></i>
                 </button>
-                <div id="filter-ing" class="filter-content" onchange="getInputValue2()">
-                    <input type="checkbox" id="search2" value="onion" >
-                        <label>onion</label><br>
-                    <input type="checkbox" id="search2" value="garlic">
-                        <label>mozzarella</label><br>
+                <!-- <div id="filter-ing" class="filter-content">
+                    <input type="radio" id="filter1" value="Asc" onclick="searchEngine()">
+                    <label for="filter1">Ascending</label>
+                    <input type="radio" id="filter2" value="Desc" onclick="searchEngine()">
+                    <label for="filter2">Descending</label>
+                </div> -->
+                
+                <div id="filter-ing" class="filter-content">
+                    <input type="radio" id="filter0" name="filter" onchange="searchEngine()">
+                        <label>Recommended</label><br>
+                    <input type="radio" id="filter1" name="filter" onchange="searchEngine()">
+                        <label>Ascending</label><br>
+                    <input type="radio" id="filter2" name="filter" onchange="searchEngine()">
+                        <label>Descending</label><br>
                 </div>
             </div>
+            
         </div>
-        <div id="output" data-mouse-down-at="0" data-prev-percentage="-45"></div>
+        <div id="output" data-mouse-down-at="0" data-prev-percentage="0"></div>
         <div id="output-text"></div>
     </div>
     <script src="scripts/carousel-script.js"></script>
