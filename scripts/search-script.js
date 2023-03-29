@@ -268,7 +268,7 @@ const objects = [
 // Matches the input with the objects in the data array.
 // Displays the data matched.
 //
-function getInputValue(){
+function searchEngine() {
     console.clear()
 
     // Store the input value
@@ -303,22 +303,22 @@ function getInputValue(){
             document.getElementById("output-text").innerHTML = "Try searching for something";
             document.getElementById("output").innerHTML = "";
         } else {
-            console.log(found)
+            // console.log(found)
             results.push(objects[i]["name"]);
         //     //console.log(objectsConvert);
         //     //console.log(found)
         }
-        
-        
-        // console.log(objectsConvert.replace(/\s+/g, '-').toLowerCase());
     }
 
-    // Remove any data previously stored in the div
-    // /document.getElementById("output").innerHTML = "";
+    if (document.getElementById('filter1').checked) {
+        results.sort();
+    } else if (document.getElementById('filter2').checked) {
+        results.sort().reverse();
+    }
 
     // Loop through the results array
     for (i = 0; i < results.length; i++) {
-        console.log(results[i].replace(/\s+/g, '-').toLowerCase());
+        // console.log(results[i].replace(/\s+/g, '-').toLowerCase());
         const div = document.createElement("div");
         div.className = "image-link";
         
@@ -326,7 +326,6 @@ function getInputValue(){
         // Create an image tag
         const img = document.createElement("img");
         img.src = "images/" + recipeImage + ".png";
-        // img.src = "images/" + recipeImage + ".jpg";
         img.className = "image";
         img.draggable = false;
 
@@ -350,6 +349,8 @@ function getInputValue(){
         }
     }
 }
+
+
 
     
 // function getInputValue2(){
