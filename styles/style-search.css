@@ -18,6 +18,10 @@ Add maybe a page that has quizzes or puzzles
 
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/background.jpg');
+    background-size: cover;
+    /* background: #f0f2f5; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 

@@ -1,0 +1,98 @@
+/* New colours:
+1: #C3BA85 - darkest
+2: #DAD5AB - lower darkest
+3: #F0F0CB - lower lightest
+4: #FEFFE2 - lightest */
+
+html{
+    height: 100%;
+    background: linear-gradient(135deg, #C3BA85 50%, #DAD5AB 50%);
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+}
+
+.top{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+
+.info{
+    /* previously 20px */
+    padding: 30px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .info-cooking .step-1{
+    width: 90%;
+    padding-bottom: 10px;
+}
+.info .info-cooking .step-2{
+    width: 80%;
+    padding-bottom: 10px;
+}
+.info .info-cooking .step-3{
+    width: 70%;
+    padding-bottom: 10px;
+}
+.info .info-cooking .step-4{
+    width: 60%;
+    padding-bottom: 10px;
+}
+.info .info-cooking .step-5{
+    width: 50%;
+    padding-bottom: 10px;
+}
+.info .info-cooking .step-6{
+    width: 40%;
+    padding-bottom: 10px;
+}
+.info .info-cooking .step-7{
+    width: 30%;
+    padding-bottom: 10px;
+}
+
+.info .info-cooking .step{
+    font-size: 20px;
+    color: #6A5C4E;
+    padding-bottom: 5px;
+}
+
+.info .info-ing{
+    color: #8D7B68;
+}
+
+/* .info .info-ing .paragraphs .ing{
+    padding-top: 10px;
+} */
+
+.info .info-ing img{
+    width: 40vmin;
+    height: 30vmin;
+    object-fit: cover;
+    object-position: 50% center;
+    border-radius: 10px;
+    border: 3px solid #C3BA85;
+}
+
+.info .info-ing .paragraphs .title{
+    font-size: 20px;
+    color: #6A5C4E;
+    padding: 5px;
+}
+
+.info .info-ing .paragraphs .ing{
+    padding-left: 10px;
+}
+
+.info .info-ing .paragraphs .ing li{
+    padding-bottom: 2px;
+}
+
+.info .info-ing .paragraphs .title2{
+    font-size: 18px;
+    color: #8D7B68;
+    padding: 5px;
+}
+
+
