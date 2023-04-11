@@ -254,6 +254,36 @@ const objects = [
         ]
     }, 
     {
+        "name": "Stuffed Peppers",
+        "ingredients": [
+            {
+                "ing1": "bell peppers",
+                "ing2": "cabbages",
+                "ing3": "onion",
+                "ing4": "carrots",
+                "ing5": "onions",
+                "ing6": "olive oil",
+                "ing7": "salt",
+                "ing8": "pepper"
+            }
+        ]
+    },
+    {
+        "name": "Pasca Easter Bread",
+        "ingredients": [
+            {
+                "ing1": "flour",
+                "ing2": "yeast",
+                "ing3": "water",
+                "ing4": "sunflower oil",
+                "ing5": "cottage cheese",
+                "ing6": "eggs",
+                "ing7": "salt",
+                "ing8": "sugar"
+            }
+        ]
+    },
+    {
         "name": "",
         "ingredients": [{}]
     }
@@ -278,9 +308,20 @@ function searchEngine() {
     // Create array to hold data that is a match
     var results = []
 
+    
+    if (inputValue === 'display-all') {
+        const text = "Only admin has permision to use this command";
+        var password = prompt(text, "Enter password");
+  
+        if (password == "1234") {
+            for (i = 0; i < objects.length; i++) {
+                results.push(objects[i]["name"]);
+            }
+        }
+    }
+
     // Loop through the main data array
     for (i = 0; i < objects.length; i++) {
-
         // Convert the data to JSON format and to lower case
         const objectsConvert = JSON.stringify(objects[i]["name"]).toLowerCase();
 
@@ -302,11 +343,8 @@ function searchEngine() {
             console.log("No data")
             document.getElementById("output-text").innerHTML = "Try searching for something";
             document.getElementById("output").innerHTML = "";
-        } else {
-            // console.log(found)
+        }  else {
             results.push(objects[i]["name"]);
-        //     //console.log(objectsConvert);
-        //     //console.log(found)
         }
     }
 
@@ -349,85 +387,3 @@ function searchEngine() {
         }
     }
 }
-
-
-
-    
-// function getInputValue2(){
-//     console.clear()
-
-//     var checked = document.getElementById("search2");
-
-//     if (checked.checked == true) {
-
-//         // Store the input value
-//         var inputValue = document.getElementById("search2").value.toLowerCase();
-//         console.log(inputValue);
-
-//         // Create array to hold data that is a match
-//         var results = []        
-
-//         // Loop through the main data array
-//         for (i = 0; i < objects.length; i++) {
-//             // Convert the data to JSON format and to lower case
-//             const objectsConvert = JSON.stringify(objects[i]["ingredients"]).toLowerCase();
-
-//             // Variable that holds the match
-//             let found = objectsConvert.match(inputValue);
-            
-
-//             // Validation check
-//             if (found === null) {
-//                 if (results.length === 0) {
-//                     console.log("No match!");
-//                     ddocument.getElementById("output").innerHTML = "";
-//                     document.getElementById("output-text").innerHTML = "No match";
-//                 } else {
-//                     document.getElementById("output").innerHTML = "";
-//                     document.getElementById("output-text").innerHTML = "";
-//                 }
-//             } else if (inputValue === '') {
-//                 found = null;
-//                 console.log("No data");
-//                 document.getElementById("output-text").innerHTML = "Try Searching for something";
-//                 document.getElementById("output").innerHTML = "";
-//             } else {
-//                 results.push(objects[i]["name"]);
-//             }
-
-            
-//         }
-
-//         // Remove any data previously stored in the div
-//         //document.getElementById("output").innerHTML = "";
-
-    
-//         // Loop through the results array
-//         for (i = 0; i < results.length; i++) {
-//             const div = document.createElement("div");
-//             div.className = "image-link";
-            
-//             // Create an image tag
-//             const img = document.createElement("img");
-//             img.src = "images/test1.jpg";
-//             img.className = "image";
-//             img.draggable = false;
-
-//             // Create an anchor tag
-//             const a = document.createElement("a");
-//             a.innerHTML = results[i];
-//             a.title = convertedResult = results[i].replace(/\s+/g, '-').toLowerCase();
-//             a.href = a.title + ".html";
-
-//             // Append the 'img' and 'a' tag to the div element
-//             div.appendChild(img);
-//             div.appendChild(a);
-
-//             // Create the output for the html
-//             document.getElementById("output").appendChild(div);
-//         }
-//     } else {
-//         document.getElementById("output").innerHTML = "";
-//         console.log("Unchecked")
-//     }
-// }
