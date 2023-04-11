@@ -17,6 +17,7 @@ Add maybe a page that has quizzes or puzzles
 */
 
 body{
+    overflow: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/background.jpg');
     background-size: cover;
     /* background: #f0f2f5; */
@@ -77,12 +78,12 @@ body{
 }
 
 .search-values-all .search-text p{
+    font-size: 18px;
     /* color: #f0f2f5; */
     color: #FEFFE2;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .search-values-all .search-values{
@@ -131,6 +132,79 @@ body{
     color: #FEFFE2;
 }
 
+.filter{
+    /* position: relative; */
+    display: inline;
+}
+
+.filter-btn{
+    /* display: flex; */
+    background: none;
+    /* color: #B8CA98; */
+    color: #C3BA85;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-content{
+    display: none;
+    position: absolute;
+    /* background-color: #f6f6f6; */
+    /* min-width: 230px; */
+    overflow: auto;
+    /* border: 1px solid #ddd; */
+    z-index: 1;
+    /* padding: 10px; */
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.filter label{
+    cursor: pointer;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.filter label span{
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px 5px 5px;
+    border-radius: 30px;
+    transition: .25s ease;
+}
+
+.filter label span:hover,
+input[type="radio"]:checked + span{
+    background: rgba(0, 0, 0, 0.5);
+    /* backdrop-filter: blur(5px);
+    border: 0.5px solid #DAD5AB; */
+}
+
+.filter span::before{
+    content: "";
+    /* background-color: #fff; */
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: .25s ease;
+    box-shadow: inset 0 0 0 2px #C3BA85;
+}
+
+input[type="radio"]:checked + span::before{
+    box-shadow: inset 0 0 0 5px #C3BA85;
+}
+
+.show{
+    padding-left: 10px;
+    display: inline;
+}
+
 
 /* Design for the search output */
 /* #output li a{
@@ -143,10 +217,19 @@ body{
     gap: 40px;
 } */
 #output-text{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    justify-content: center; */
+    transition: 0.5s ease;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 40px; 
+    position: absolute; 
+    left: 50%; 
+    top: 60%;
+    transform: translate(-50%, -50%);
+    user-select: none;
 }
 
 /* #output-text > .image-link > .image{
@@ -177,7 +260,7 @@ body{
     gap: 40px; 
     position: absolute; 
     left: 50%; 
-    top: 55%;
+    top: 60%;
     transform: translate(0%, -50%);
     user-select: none;
 }
@@ -213,38 +296,4 @@ body{
     /* border-radius: 50% 20% / 10% 25%; */
     backdrop-filter: blur(5px);
     box-shadow: 3px 3px 10px #19191b, -3px -3px 10px #19191b;
-}
-
-
-
-
-.filter-btn{
-    /* display: flex; */
-    background: none;
-    /* color: #B8CA98; */
-    color: #C3BA85;
-    padding: 10px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-}
-
-  
-.filter{
-    /* position: relative; */
-    display: inline;
-}
-
-.filter-content{
-    display: none;
-    position: absolute;
-    /* background-color: #f6f6f6; */
-    min-width: 230px;
-    overflow: auto;
-    /* border: 1px solid #ddd; */
-    z-index: 1;
-}
-
-.show{
-    display: inline;
 }
