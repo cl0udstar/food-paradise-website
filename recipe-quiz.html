@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/style-default.css">
+    <link rel="stylesheet" href="styles/style-quiz.css">
+    <title>Food Paradise - Recipe quiz</title>
+    <link rel="icon" type="png" href="images/logo2.0.png">
+    <script src="scripts/clock-script.js" defer></script>
+    <script src="scripts/hint-script.js" defer></script>
+    <script>
+        document.addEventListener("contextmenu", (e) => {e.preventDefault()});
+
+        function badWindow() {
+            window.alert("Good try!\nKeep looking...")
+        }
+    </script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search-recipes.html">Search</a></li>
+                <li><a href="recipe-lists.html">Recipe Lists</a></li>
+            </ul>
+        </div>
+        <div class="clock">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+    </div>
+
+    <div class="quiz-txt">
+        <div class="flag-section">
+            <h3 id="click" oncontextmenu="displayFlag()">Expected something different?</h3>
+            <div id="flag-text" style="visibility: hidden;">
+                Here is the key:
+                <span id="flag" class="tooltip" onclick="copyFlag()">
+                    <!-- <span class="tooltiptext">Copy!</span> -->
+                </span>
+                <p>(clicking on the key, copies it)</p>
+            </div>
+        </div>
+        
+        <p>Don't worry, do what you are told below. And thanks :)</p>
+        <br>
+        <p>What you are trying to accomplish is to try and find a way to access the hidden recipe.</p>
+    </div>
+
+    <div class="hints">
+        <label>
+            <input type="checkbox" id="hint1-check" name="hints" onclick="hint_1()" onchange="displayPrompt()">
+            <span>Hint 1</span>
+        </label>
+        <label>
+            <input type="checkbox" id="hint2-check" name="hints" onclick="hint_2()" onchange="displayPrompt()">
+            <span>Hint 2</span>
+        </label>
+        <label>
+            <input type="checkbox" id="hint3-check" name="hints" onclick="hint_3()" onchange="displayPrompt()">
+            <span>Hint 3</span>
+        </label>
+        <label>
+            <input type="checkbox" id="hint4-check" name="hints" onclick="hint_4()" onchange="displayPrompt()">
+            <span>Hint 4</span>
+        </label>
+        <label>
+            <input type="checkbox" id="hint5-check" name="hints" onclick="hint_5()" onchange="displayPrompt()">
+            <span>Hint 5</span>
+        </label>
+    </div>
+
+    <div class="hint-content">
+        <div id="hint1-txt" style="display: none;">
+            <p class="p1">You are looking for a text key.</p>
+            <p class="p2">The key is somewhere on this page, well hidden.</p>
+            <p class="p3">(<span class="high-txt1">right-click</span> is disabled on this page.)</p>
+        </div>
+
+        <div id="hint2-txt" style="display: none;">
+            <p class="p1">Try clicking stuff, refer to 'Hint 1'. Analyse the text in the brackets.</p>
+            <p>Access 'Hint 3' only when you have found the key or can't find it.</p>
+        </div>
+
+        <div id="hint3-txt" style="display: none;">
+            <p>By now you should've found the flag. If not then try right-clicking on 'Expected something different?'.</p>
+            <p>Okay, so, now you want to find a way which opens up a <span class="high-txt2" onclick="badWindow()">prompt</span> window.</p>
+            <p>Access 'Hint 4' if you are stuck.</p>
+        </div>
+
+        <div id="hint4-txt" style="display: none;">
+            <p>Need help? Sure, the hint buttons are also checkboxes. Meaning you can select them to make a combination.</p>
+            <p>You can try and find the right combination by selecting them.</p>
+            <p>(Only access 'Hint 5' if you are really stuck and can't find the combination)</p>
+        </div>
+
+        <div id="hint5-txt" style="display: none;">
+            <p>Can't find the combination?</p>
+            <p>Happy to help! Try thi combination: <span onclick="spoiler()" id="hide-key">'Hint 1 - 2 - 4'</span></p>
+        </div>
+    </div>
+
+    <div class="p-box" id="prompt-box" style="visibility: hidden;" onchange="displayPrompt()">
+        <div class="text">
+            <p>You found it!</p>
+            <p>Hopefully you have the flag copied!</p>
+            <p>If not keep searching.</p>
+            <p>(But hey, at least you found the prompt)</p>
+        </div>
+        <div class="key-input">
+            <input type="text" placeholder="Enter key" id="key-text" class="key-input-txt">  
+        </div>
+        <div class="key-check" onclick="checkKey()">
+            <button class="submit-btn" id="submit">Check key</button>
+        </div>
+    </div>
+
+    <!-- <div class="tooltip">Hover
+        <span class="tooltiptext">Tooltip text</span>
+    </div> -->
+
+    
+    
+    <script src="scripts/quiz-script.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+</html>

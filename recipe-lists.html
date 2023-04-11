@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/style-default.css">
+    <link rel="stylesheet" href="styles/style-lists.css">
+    <title>Food Paradise - Recipe Lists</title>
+    <link rel="icon" type="png" href="images/logo2.0.png">
+    <script src="scripts/clock-script.js" defer></script>
+    <script src="scripts/recipe-lists-script.js" defer></script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe-quiz.html">Recipe of the day</a></li>
+                <li><a href="search-recipes.html">Search</a></li>
+            </ul>
+        </div>
+        <div class="clock">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+    </div>
+
+    <div class="lists-description">
+        <p>On this page, you can find pre-made lists with food recipes.</p>
+        <p>These are part of some cultures and also lists with recipes that depend on the preparation time.</p>
+    </div>
+
+    <!-- <div class="list-nav"> -->
+    <div class="navbar2">
+        <label>
+            <input type="radio" name="recipes" onclick="list_section1()" checked>
+            <span>Creator's Pick</span>
+        </label>
+        <label>
+            <input type="radio" name="recipes" onclick="list_section2()">
+            <span>Moldovan Food</span>
+        </label>
+        <label>
+            <input type="radio" name="recipes" onclick="list_section3()">
+            <span>Quick Recipes</span>
+        </label>
+        <label>
+            <input type="radio" name="recipes" onclick="list_section4()">
+            <span>Delicious Dishes</span>
+        </label>
+        <label>
+            <input type="radio" name="recipes" onclick="list_section5()">
+            <span>Vegetarian</span>
+        </label>
+
+        <!-- <span id="title" onclick="list_section5()">Creator's Pick</span>
+        <span id="title" onclick="list_section1()">Moldovan Food</span>
+        <span id="title" onclick="list_section2()">Quick Recipes</span>
+        <span id="title" onclick="list_section3()">Delicious Dishes</span>
+        <span id="title" onclick="list_section4()">Vegetarian</span> -->
+    </div>
+    <!-- </div> -->
+
+    <div class="list-section" id="creator" style="display: flex;">
+        <div class="list-box">
+            <h3>Creator's pick</h3>
+            <div class="list">
+                <a href="recipes/stuffed-peppers.html">
+                    <div class="imgBx">
+                        <img src="images/stuffed-peppers.png">
+                    </div>
+                    <div class="content">
+                        <h4>Stuffed peppers</h4>
+                        <p>Just too good</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/fish-curry.html">
+                    <div class="imgBx">
+                        <img src="images/fish-curry.png">
+                    </div>
+                    <div class="content">
+                        <h4>Fish curry</h4>
+                        <p>Fish in sauce, good combo</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/fried-rice.html">
+                    <div class="imgBx">
+                        <img src="images/fried-rice.png">
+                    </div>
+                    <div class="content">
+                        <h4>Fried rice</h4>
+                        <p>Rich source of carbohydrates</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/omlette.html">
+                    <div class="imgBx">
+                        <img src="images/omlette.png">
+                    </div>
+                    <div class="content">
+                        <h4>Omlette</h4>
+                        <p>It's fast to prepare, okay!?</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-section" id="moldovan-food" style="display: none;">
+        <div class="list-box">
+            <h3>Moldovan traditional food</h3>
+            <div class="list">
+                <a href="recipes/mamaliga.html">
+                    <div class="imgBx">
+                        <img src="images/mamaliga.png">
+                    </div>
+                    <div class="content">
+                        <h4>Mamaliga</h4>
+                        <p>The traditional food like nowhere else</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/stuffed-peppers.html">
+                    <div class="imgBx">
+                        <img src="images/stuffed-peppers.png">
+                    </div>
+                    <div class="content">
+                        <h4>Stuffed Peppers</h4>
+                        <p>The authentic taste of Moldova</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/pasca-easter-bread.html">
+                    <div class="imgBx">
+                        <img src="images/pasca-easter-bread.png">
+                    </div>
+                    <div class="content">
+                        <h4>Pasca - Easter Bread</h4>
+                        <p>Easter symbol in Moldova</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-section" id="quick-food" style="display: none;">
+        <div class="list-box">
+            <h3>Quick preparation recipes</h3>
+            <div class="list">
+                <a href="recipes/creamy-mushroom-soup.html">
+                    <div class="imgBx">
+                        <img src="images/creamy-mushroom-soup.png">
+                    </div>
+                    <div class="content">
+                        <h4>Creamy Mushroom Soup</h4>
+                        <p>Delicious soup in no time</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/summer-salad.html">
+                    <div class="imgBx">
+                        <img src="images/summer-salad.png">
+                    </div>
+                    <div class="content">
+                        <h4>Summer Salad</h4>
+                        <p>Best thing you can prepare in the summer</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/smoky-beans-on-toast.html">
+                    <div class="imgBx">
+                        <img src="images/smoky-beans-on-toast.png">
+                    </div>
+                    <div class="content">
+                        <h4>Smoky beans on toast</h4>
+                        <p>Quick and easy</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/tomato-risotto.html">
+                    <div class="imgBx">
+                        <img src="images/tomato-risotto.png">
+                    </div>
+                    <div class="content">
+                        <h4>Tomato risotto</h4>
+                        <p>Not much work involved, so give it a try</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/omlette.html">
+                    <div class="imgBx">
+                        <img src="images/omlette.png">
+                    </div>
+                    <div class="content">
+                        <h4>Omlette</h4>
+                        <p>Classic</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-section" id="delicious-dishes" style="display: none;">
+        <div class="list-box">
+            <h3>Delicious dishes</h3>
+            <div class="list">
+                <a href="recipes/chicken-jalfrezi.html">
+                    <div class="imgBx">
+                        <img src="images/chicken-jalfrezi.png">
+                    </div>
+                    <div class="content">
+                        <h4>Chicken jalfrezi</h4>
+                        <p>Healthy curry recipe</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/fish-curry.html">
+                    <div class="imgBx">
+                        <img src="images/fish-curry.png">
+                    </div>
+                    <div class="content">
+                        <h4>Fish curry</h4>
+                        <p>Nothing is better than a fish curry</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/mexican-bean-soup.html">
+                    <div class="imgBx">
+                        <img src="images/mexican-bean-soup.png">
+                    </div>
+                    <div class="content">
+                        <h4>Mexican bean soup</h4>
+                        <p>Something spicyyy</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/stuffed-peppers.html">
+                    <div class="imgBx">
+                        <img src="images/stuffed-peppers.png">
+                    </div>
+                    <div class="content">
+                        <h4>Stuffed peppers</h4>
+                        <p>The authentic taste of Moldova</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-section" id="vegetarian" style="display: none;">
+        <div class="list-box">
+            <h3>Vegetarian</h3>
+            <div class="list">
+                <a href="recipes/vegetarian-lasagna.html">
+                    <div class="imgBx">
+                        <img src="images/vegetarian-lasagna.png">
+                    </div>
+                    <div class="content">
+                        <h4>Vegetarian lasagna</h4>
+                        <p>Rememeber, don't eat it all at once</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/creamy-mushroom-soup.html">
+                    <div class="imgBx">
+                        <img src="images/creamy-mushroom-soup.png">
+                    </div>
+                    <div class="content">
+                        <h4>Creamy mushroom soup</h4>
+                        <p>Did someone say soup?</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/tomato-risotto.html">
+                    <div class="imgBx">
+                        <img src="images/tomato-risotto.png">
+                    </div>
+                    <div class="content">
+                        <h4>Tomato risotto</h4>
+                        <p>A lot of red...</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list">
+                <a href="recipes/stuffed-peppers.html">
+                    <div class="imgBx">
+                        <img src="images/stuffed-peppers.png">
+                    </div>
+                    <div class="content">
+                        <h4>Stuffed peppers</h4>
+                        <p>Yes, they are vegetarian too</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
