@@ -1,0 +1,158 @@
+html{
+    height: 100%;
+    background: linear-gradient(90deg, #C3BA85 50%, #DAD5AB 50%);
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+}
+
+.top{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.lists-description{
+    padding: 30px;
+    /* padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px; */
+}
+
+.lists-description p{
+    /* color: #f0f2f5; */
+    color: #6A5C4E;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+    font-size: 18px;
+}
+
+.navbar2{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #6A5C4E;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.navbar2 label{
+    padding: 0 20px;
+    /* padding: 15px; */
+}
+
+.navbar2 label span{
+    cursor: pointer;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 30px;
+    transition: .5s ease;
+}
+
+.navbar2 label span:hover,
+input[type="radio"]:checked + span{
+    background: rgba(0, 0, 0, 0.5);
+    color: #DAD5AB;
+}
+
+/* .list-nav .navbar2 span{
+    display: inline-flex;
+    list-style: none;
+    padding: 5px 40px;
+    border-radius: 30px;
+} */
+
+/* .list-nav .navbar2 span:hover{
+    background: rgba(0, 0, 0, 0.5);
+    color: #DAD5AB;
+    transition: 0.5s;  
+} */
+
+
+
+
+.list-section{
+    overflow: hidden;
+    justify-content: center;
+}
+
+.list-box{
+    margin: 30px;
+    width: 400px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    border: 1.5px solid #6A5C4E;
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(25px);
+}
+
+.list-box h3{
+    color: #FEFFE2;
+    margin-bottom: 20px;
+}
+
+.list-box .list{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.list-box .list:hover{
+    background: #FEFFE2;
+    transform: scale(1.15) translateX(30px);
+}
+
+.list-box .list a{
+    display: flex;
+    text-decoration: none;
+}
+
+.list-box .list .imgBx{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.list-box .list .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list-box .list .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FEFFE2;
+}
+
+.list-box .list .content h4{
+    line-height: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.list-box .list .content p{
+    font-size: 12px;
+    transition: 0.5s;
+}
+
+.list-box .list:hover .content h4,
+.list-box .list:hover .content p{
+    color: #6A5C4E;
+}
