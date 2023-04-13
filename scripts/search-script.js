@@ -309,14 +309,16 @@ function searchEngine() {
     var results = []
 
     
-    if (inputValue === 'display-all') {
+    if (inputValue === '*') {
         const text = "Only admin has permision to use this command";
         var password = prompt(text, "Enter password");
   
-        if (password == "1234") {
+        if (password == "classiccheese") {
             for (i = 0; i < objects.length; i++) {
                 results.push(objects[i]["name"]);
             }
+        } else {
+            alert("Wrong password!")
         }
     }
 
@@ -326,9 +328,17 @@ function searchEngine() {
         const objectsConvert = JSON.stringify(objects[i]["name"]).toLowerCase();
 
         // Variable that holds the match
-        let found = objectsConvert.match(inputValue);
+        let found;
 
-        // // Validation check
+        var specChar = /[[|&!?;$%@"\\<>()+.,*]/g;
+
+        if (inputValue.match(specChar)) {
+            found = null;
+        } else {
+            found = objectsConvert.match(inputValue);
+        }
+
+        // Validation check
         if (found === null) {
             if (results.length === 0) {
                 console.log("No match!");
@@ -338,7 +348,7 @@ function searchEngine() {
                 document.getElementById("output").innerHTML = "";
                 document.getElementById("output-text").innerHTML = "";
             }
-        } else if (inputValue === '') {
+        } else if (inputValue === '' || inputValue === ' ' || inputValue.match(specChar)) {
             found = null
             console.log("No data")
             document.getElementById("output-text").innerHTML = "Try searching for something";
