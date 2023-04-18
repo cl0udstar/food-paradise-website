@@ -1,9 +1,3 @@
-/* New colours:
-1: #C3BA85 - darkest
-2: #DAD5AB - lower darkest
-3: #F0F0CB - lower lightest
-4: #FEFFE2 - lightest */
-
 html{
     height: 100%;
     background: linear-gradient(135deg, #C3BA85 50%, #DAD5AB 50%);
@@ -15,7 +9,6 @@ html{
 
 
 .info{
-    /* previously 20px */
     padding: 30px; 
     display: flex;
     justify-content: space-between;
