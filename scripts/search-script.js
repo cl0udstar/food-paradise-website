@@ -1,6 +1,4 @@
-//
 // The data that will be matched
-//
 const objects = [
     {
         "name": "Chicken pasta bake",
@@ -50,21 +48,6 @@ const objects = [
             }
         ]
     },
-    // {
-    //     "name": "Moldovan steak in sauce",
-    //     "ingredients": [
-    //         {
-    //             "ing1": "onion",
-    //             "ing2": "carrots",
-    //             "ing3": "bell pepper",
-    //             "ing4": "tomato souce",
-    //             "ing5": "pork meat",
-    //             "ing6": "black pepper",
-    //             "ing7": "paprika",
-    //             "ing8": "garlic powder"
-    //         }
-    //     ]
-    // },
     {
         "name": "Vegetarian Lasagna",
         "ingredients": [
@@ -308,7 +291,6 @@ function searchEngine() {
     // Create array to hold data that is a match
     var results = []
 
-    
     if (inputValue === '*') {
         const text = "Only admin has permision to use this command";
         var password = prompt(text, "Enter password");
@@ -366,11 +348,11 @@ function searchEngine() {
 
     // Loop through the results array
     for (i = 0; i < results.length; i++) {
-        // console.log(results[i].replace(/\s+/g, '-').toLowerCase());
         const div = document.createElement("div");
         div.className = "image-link";
         
         const recipeImage = results[i].replace(/\s+/g, '-').toLowerCase();
+        
         // Create an image tag
         const img = document.createElement("img");
         img.src = "images/" + recipeImage + ".png";
