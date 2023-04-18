@@ -1,8 +1,6 @@
 html{
     height: 100%;
     background: linear-gradient(90deg, #C3BA85 50%, #DAD5AB 50%);
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
 }
 
 .top{
@@ -11,17 +9,10 @@ html{
 
 .lists-description{
     padding: 30px;
-    /* padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px; */
 }
 
 .lists-description p{
-    /* color: #f0f2f5; */
     color: #6A5C4E;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     text-align: center;
     font-size: 18px;
 }
@@ -41,7 +32,6 @@ input[type="radio"]{
 
 .navbar2 label{
     padding: 0 20px;
-    /* padding: 15px; */
 }
 
 .navbar2 label span{
@@ -57,21 +47,6 @@ input[type="radio"]:checked + span{
     background: rgba(0, 0, 0, 0.5);
     color: #DAD5AB;
 }
-
-/* .list-nav .navbar2 span{
-    display: inline-flex;
-    list-style: none;
-    padding: 5px 40px;
-    border-radius: 30px;
-} */
-
-/* .list-nav .navbar2 span:hover{
-    background: rgba(0, 0, 0, 0.5);
-    color: #DAD5AB;
-    transition: 0.5s;  
-} */
-
-
 
 
 .list-section{
