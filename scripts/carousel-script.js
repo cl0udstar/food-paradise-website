@@ -2,12 +2,10 @@
 
 var track = document.getElementById("output");
 
-//was window.onmousedown
 track.onmousedown = e => {
     track.dataset.mouseDownAt = e.clientX;
 }
 
-//was window.onmouseup
 track.onmouseup = () => {
     track.dataset.mouseDownAt = "0";
     track.dataset.prevPercentage = track.dataset.percentage;
