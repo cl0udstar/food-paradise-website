@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-<!--     <meta name="viewport" content="width=device-width"> -->
     <link rel="stylesheet" href="styles/style-default.css">
     <link rel="stylesheet" href="styles/style-quiz.css">
     <title>Food Paradise - Recipe quiz</title>
@@ -46,9 +45,7 @@
             </div>
         </div>
         
-        <p>Don't worry, do what you are told below. And thanks :)</p>
-        <br>
-        <p>What you are trying to accomplish is to try and find a way to access the hidden recipe.</p>
+        <p>Don't worry, just follow the instructions and you will find the hidden recipe in no time.</p>
     </div>
 
     <div class="hints">
@@ -76,19 +73,20 @@
 
     <div class="hint-content">
         <div id="hint1-txt" style="display: none;">
-            <p class="p1">You are looking for a text key.</p>
-            <p class="p2">The key is somewhere on this page, well hidden.</p>
-            <p class="p3">(<span class="high-txt1">right-click</span> is disabled on this page.)</p>
+            <p>You are looking for a text key.</p>
+            <p>The key is hidden somewhere on this page.</p>
+            <p>(<span class="high-txt1">right-click</span> is disabled on this page)</p>
+            <p>(on mobile instead of right-click, use a long press)</p>
         </div>
 
         <div id="hint2-txt" style="display: none;">
-            <p class="p1">Try clicking stuff, refer to 'Hint 1'. Analyse the text in the brackets.</p>
+            <p>Try clicking stuff, refer to 'Hint 1'. Analyse the text in the brackets.</p>
             <p>Access 'Hint 3' only when you have found the key or can't find it.</p>
         </div>
 
         <div id="hint3-txt" style="display: none;">
             <p>By now you should've found the flag. If not then try right-clicking on 'Expected something different?'.</p>
-            <p>Okay, so, now you want to find a way which opens up a <span class="high-txt2" onclick="badWindow()">prompt</span> window.</p>
+            <p>Okay, so, now you want to find a way which opens up a <span class="high-txt2" onclick="badWindow()">small window</span>.</p>
             <p>Access 'Hint 4' if you are stuck.</p>
         </div>
 
@@ -100,7 +98,7 @@
 
         <div id="hint5-txt" style="display: none;">
             <p>Can't find the combination?</p>
-            <p>Happy to help! Try thi combination: <span onclick="spoiler()" id="hide-key">'Hint 1 - 2 - 4'</span></p>
+            <p>Happy to help! Try this combination: <span onclick="spoiler()" id="hide-key">'Hint 1 - 2 - 4'</span></p>
         </div>
     </div>
 
@@ -109,7 +107,7 @@
             <p>You found it!</p>
             <p>Hopefully you have the flag copied!</p>
             <p>If not keep searching.</p>
-            <p>(But hey, at least you found the prompt)</p>
+            <p>(But hey, at least you found the window)</p>
         </div>
         <div class="key-input">
             <input type="text" placeholder="Enter key" id="key-text" class="key-input-txt">  
@@ -118,7 +116,7 @@
             <button class="submit-btn" id="submit">Check key</button>
         </div>
     </div>
-    
+
     <script src="scripts/quiz-script.js"></script>
 </body>
 </html>
