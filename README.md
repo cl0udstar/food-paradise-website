@@ -27,21 +27,6 @@ This project serves as a demonstration of fundamental web development skills, in
 - **JavaScript**: Interactive elements and dynamic content handling.
 
 ---
-
-## 📁 Project Structure
-Food-Paradise-Project/
-├── images/                 # Image assets used across the website
-├── recipes/                # HTML files for individual recipes
-├── scripts/                # JavaScript files for interactivity
-├── styles/                 # CSS files for styling
-├── index.html              # Main landing page
-├── recipe-lists.html       # Page listing all recipes
-├── search-recipes.html     # Recipe search functionality
-├── recipe-quiz.html        # “Recipe of the Day” challenge
-└── 404.html                # Custom 404 error page
-
----
-
 ## 🎓 Acknowledgements
 
 This project was developed as part of a university module to demonstrate proficiency in web development technologies and principles.
