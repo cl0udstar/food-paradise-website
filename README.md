@@ -29,5 +29,3 @@ Built as a university project for a web development module, this site showcases 
 - **Responsive Design** — Looks great on desktop, tablet and mobile
 
 ---
-
-##  Project Structure
