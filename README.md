@@ -1,32 +1,33 @@
-# 🍽️ Food Paradise
+# Food Paradise
 
-Welcome to the **Food Paradise** — a university assignment developed for a web development module. This interactive website showcases a collection of recipes, a search feature, and a fun "Recipe of the Day" challenge to engage users.
-
----
-
-## 📌 Overview
-
-This project serves as a demonstration of fundamental web development skills, incorporating HTML, CSS, and JavaScript to create an engaging user experience centered around culinary content.
+An interactive culinary exploration — browse recipes, use the search feature, and take on the daily “Recipe of the Day” challenge!
 
 ---
 
-## 🚀 Features
-
-- **Homepage**: Introduction to the website with navigation to various sections.
-- **Recipe Lists**: Browse through a curated selection of recipes.
-- **Search**: Find recipes by name or ingredient.
-- **Recipe of the Day**: Engage in a daily challenge to discover a featured recipe.
-- **Responsive Design**: Optimized for viewing on desktops, tablets, and mobile devices.
+##  Live Demo  
+Experience the site live at: [https://cl0udstar.github.io/food-paradise-website/](https://cl0udstar.github.io/food-paradise-website/)
 
 ---
 
-## 🛠️ Technologies Used
-
-- **HTML5**: Structuring the content of the web pages.
-- **CSS3**: Styling and layout of the website.
-- **JavaScript**: Interactive elements and dynamic content handling.
+##  Overview  
+Built as a university project for a web development module, this site showcases your ability to blend functionality with user friendly design. It offers an intuitive layout, responsive behavior and dynamic content for food lovers.
 
 ---
-## 🎓 Acknowledgements
 
-This project was developed as part of a university module to demonstrate proficiency in web development technologies and principles.
+##  Tech Stack  
+- **HTML5** — Core page structure  
+- **CSS3** — Styling and responsive layouts  
+- **JavaScript** — Interactivity, search logic, daily recipe feature  
+
+---
+
+##  Key Features  
+- **Homepage** with clear navigation  
+- **Recipe Lists** — Browse curated culinary options  
+- **Search Function** — Quickly find recipes by name or ingredient  
+- **Recipe of the Day** — A fun daily pick to spice up user engagement  
+- **Responsive Design** — Looks great on desktop, tablet and mobile
+
+---
+
+##  Project Structure
