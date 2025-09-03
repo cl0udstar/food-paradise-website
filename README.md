@@ -5,7 +5,7 @@ An interactive culinary exploration — browse recipes, use the search feature, 
 ---
 
 ##  Live Demo  
-Experience the site live at: [https://cl0udstar.github.io/food-paradise-website/](https://cl0udstar.github.io/food-paradise-website/)
+Try it live → [https://cl0udstar.github.io/food-paradise-website/](https://cl0udstar.github.io/food-paradise-website/)
 
 ---
 
